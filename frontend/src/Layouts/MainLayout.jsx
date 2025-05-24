@@ -11,7 +11,7 @@ import user from "../utils/user";
 import avatar from "../assets/avatar.png";
 import "./index.less";
 
-const { Header, Content, Sider } = Layout;
+const { Header, Content, Sider, Footer } = Layout;
 
 function MainLayout() {
   const [current, setCurrent] = useState('1');
@@ -87,8 +87,13 @@ function MainLayout() {
         <Content style={{ padding: '20px', overflow: 'auto' }}>
           {/* 子路由将在这里渲染 */}
           <Outlet />
+          <Footer style={{ textAlign: 'center', marginBlockEnd: '30px' }}>
+            Backend Admin ©2025 Created by Ma Zheng
+          </Footer>
         </Content>
       </Layout>
+      {/* 底部内容 */}
+      
     </Layout>
   )
 }
